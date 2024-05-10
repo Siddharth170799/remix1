@@ -5,6 +5,19 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+// import styles from './styles/main.css'
+import Navbar from '~/components/Navbar'
+import Hello from "./components/Hello";
+
+// import Fetch from "./components/Fetch";
+import styles from '~/styles/home.css'
+{
+  /* The following line can be included in your src/index.js or App.js file */
+}
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ToDoList from "./components/ToDoList";
+
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -25,5 +38,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <>
+  {/* <Navbar/> */}
+  <Outlet />
+  {/* <Hello/> */}
+  {/* <Notes/> */}
+  {/* <Fetch/> */}
+  <ToDoList/>
+ 
+  
+  </>)
+
 }
+
